@@ -1,0 +1,89 @@
+<view class="cart-page">
+  <!-- 搜索区域 -->
+  <search-input />
+
+  <!-- 收货地址 -->
+  <view class="shipping-address">
+    <!-- 添加收货地址按钮 -->
+    <view class="add-address" hidden="{{ address }}">
+      <button type="primary" plain bind:tap="addressClick">+ 收货地址</button>
+    </view>
+
+    <!-- 具体的收货地址 -->
+    <view class="address-info" hidden="{{ !address }}">
+      <view class="user-info">
+        <view class="user-name">收件人：{{ address.userName }}</view>
+        <view class="user-phone">{{ address.telNumber }}</view>
+      </view>
+      <view
+        class="user-address"
+      >{{ address.provinceName + address.cityName + address.countyName + address.detailInfo }}</view>
+    </view>
+  </view>
+
+  <!-- 购物车商品列表 -->
+  <view class="cart-list-wrap">
+    <!-- 当购物车商品为空时显示 -->
+    <view class="cart-empty" hidden="{{ cartList.length > 0 }}">
+      <image src="/assets/img/cart/timg.gif" />
+    </view>
+    <view class="cart-list" wx:for="{{ cartList }}" wx:key="index">
+      <!-- 商品选中 -->
+      <view class="checked">
+        <checkbox-group
+          bind:change="handleChange"
+          data-index="{{ index }}"
+          data-checked="{{ item.checked }}"
+        >
+          <checkbox checked="{{ item.checked }}" />
+        </checkbox-group>
+      </view>
+      <!-- 商品图片 -->
+      <view class="img">
+        <image src="{{ item.img }}" />
+      </view>
+      <view class="goods-info">
+        <!-- 商品描述 -->
+        <view class="desc">{{ item.title }}</view>
+        <!-- 商品价格和数量 -->
+        <view class="wrap">
+          <!-- 商品价格 -->
+          <view class="price">￥{{ item.price }}</view>
+          <!-- 商品数量 -->
+          <view class="count">
+            <view
+              class="add-count"
+              bind:tap="changeCount"
+              data-index="{{ index }}"
+              data-operation="{{ -1 }}"
+            >-</view>
+            <view class="num">{{ item.count }}</view>
+            <view
+              class="sub-count"
+              bind:tap="changeCount"
+              data-index="{{ index }}"
+              data-operation="{{ 1 }}"
+            >+</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 购物车底部结算区域 -->
+  <view class="bottom">
+    <view class="all-checked">
+      <checkbox-group bind:change="allChecked">
+        <checkbox checked="{{ allChecked }}" />全选
+      </checkbox-group>
+    </view>
+    <view class="total-price">
+      <view>
+        合计 ￥
+        <text class="price">{{ totalPrice }}</text>
+      </view>
+      <view class="return">退货包运费</view>
+    </view>
+    <view class="balance" bind:tap="payClick">结算({{ totalCount }})</view>
+  </view>
+</view>

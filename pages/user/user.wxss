@@ -1,0 +1,124 @@
+.profile-page {
+    background-color: #eee;
+    padding-bottom: 100rpx;
+}
+
+/* 用户信息 */
+.profile-page .user {
+    position: relative;
+    height: 32vh;
+}
+
+/* 登录按钮 */
+.profile-page .user .user-login {
+    height: 100%;
+    padding-top: 120rpx;
+    background-color: rgb(254,102,13);
+}
+
+/* 用户头像的容器 */
+.profile-page .user .image-box image {
+    width: 100vw;
+    height: 32vh;
+    filter: blur(12rpx);
+}
+
+/* 用户头像 */
+.profile-page .user .user-avatar {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.profile-page .user .user-avatar .user-name {
+    text-align: center;
+    margin-top: 20rpx;
+    color: white;
+}
+
+/* 用户头像图片 */
+.profile-page .user .user-avatar image {
+    width: 160rpx;
+    height: 160rpx;
+    border-radius: 50%;
+}
+
+
+
+/* 主要区域 */
+.profile-page .main {
+    position: relative;
+    top: -20rpx;
+    width: 94vw;
+    margin: 0 auto;
+}
+
+.profile-page .main > view {
+    margin-bottom: 30rpx;
+    font-size: 29rpx;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+
+.profile-page .main .part1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 90rpx;
+    padding:  14rpx 20rpx;
+}
+    
+
+
+.profile-page .main .part2 .my-order {
+    height: 70rpx;
+    line-height: 70rpx;
+    border-bottom: 1px solid #eaeaea;
+    padding-left: 20rpx;
+}
+
+.profile-page .main .part2 .order-list {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    padding: 0 20rpx;
+    height: 110rpx;
+}
+
+.profile-page .main .part3 {
+    height: 70rpx;
+    line-height: 70rpx;
+    padding-left: 20rpx;
+}
+
+.profile-page .main .part4 {
+    padding: 0 15rpx;
+    font-size: 34rpx;
+}
+
+.profile-page .main .part4 .list{
+    padding: 0 10rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.profile-page .main .part4 .list:first-child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-page .main .part5 {
+    height: 80rpx;
+    line-height: 80rpx;
+    padding-left: 25rpx;
+    font-size: 34rpx;
+}
+
+.red {
+    color: red;
+}

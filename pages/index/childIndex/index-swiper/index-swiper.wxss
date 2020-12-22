@@ -1,0 +1,8 @@
+/* swiper适配image组件 */
+.swiper {
+    height: 340rpx;
+}
+
+.swiper .swiper-item image {
+    width: 100vw;
+}

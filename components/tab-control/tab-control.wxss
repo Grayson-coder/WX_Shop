@@ -1,0 +1,17 @@
+.tab-control {
+    display: flex;
+    height: 98rpx;
+    line-height: 98rpx;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fff;
+}
+
+.tab-control .item {
+    flex: 1;
+    text-align: center;
+}
+
+.active {
+    color: var(--themeColor);
+    border-bottom: 1px solid var(--themeColor);
+}

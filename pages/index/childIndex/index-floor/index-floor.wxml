@@ -1,0 +1,24 @@
+<view
+  class="wrap"
+  wx:for="{{ floorData }}"
+  wx:key="index1"
+  wx:for-index="index1"
+  wx:for-item="item1"
+>
+  <!-- 标题 -->
+  <image src="{{ item1.floor_title.image_src }}" class="title" mode="widthFix" />
+  <!-- 商品列表 -->
+  <view class="list">
+    <view
+      class="list-item"
+      wx:for="{{ item1.product_list }}"
+      wx:for-item="item2"
+      wx:for-index="index2"
+      wx:key="name"
+      bind:tap="listClick"
+      data-url="{{ item2.navigator_url }}"
+    >
+      <image src="{{ item2.image_src }}" />
+    </view>
+  </view>
+</view>

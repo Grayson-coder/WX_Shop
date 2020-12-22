@@ -1,0 +1,51 @@
+.search-page {
+    height: 100vh;
+    padding-top: 30rpx;
+    background-color: rgb(245, 245, 245);
+}
+
+/* 搜索行区域 */
+.search-page .search-row {
+    display: flex;
+    padding: 0 30rpx;
+}
+
+/* 搜索表单 */
+.search-page input {
+    flex: 8;
+    height: 60rpx;
+    line-height: 60rpx;
+    padding-left: 30rpx;
+    background-color: #fff;
+}
+
+/* 取消按钮 */
+.search-page .cancel {
+    width: 100rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-left: 20rpx;
+    text-align: center;
+    font-size: 26rpx;
+    background-color: #fff;
+    border-radius: 15rpx;
+}
+
+/* 搜索内容区域 */
+.search-page .search-content {
+    margin-top: 30rpx;
+    padding: 0 30rpx;
+}
+
+.search-page .search-content .list {
+    padding: 25rpx;
+    border-bottom: 1px solid #eaeaea;
+    background-color: #fff;
+
+    /* 强制不换行 */
+    white-space: nowrap;
+    /* 超出部分隐藏 */
+    overflow: hidden;
+    /* 超出部分以省略号代替 */
+    text-overflow: ellipsis;
+}

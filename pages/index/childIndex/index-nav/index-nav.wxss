@@ -1,0 +1,10 @@
+.nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 20rpx 0 ;
+}
+
+.nav .nav-item image {
+    width: 120rpx;
+    height: 120rpx;
+}

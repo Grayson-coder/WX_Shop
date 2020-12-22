@@ -1,0 +1,140 @@
+/* 添加收货地址的按钮 */
+.cart-page .add-address button {
+    width: 60vw;
+    margin: 24rpx auto;
+}
+
+/* 具体收货地址 */
+.cart-page .address-info {
+    padding: 20rpx 20rpx;
+    font-size: 28rpx;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.cart-page .address-info .user-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* 购物车底部区域 */
+.cart-page .bottom {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 90rpx;
+    text-align: center;
+    align-items: center;
+    padding-left: 10rpx;
+    background-color: white;
+}
+
+.cart-page .bottom .all-checked {
+    flex: 1;
+}
+
+.cart-page .bottom .total-price {
+    flex: 3;
+}
+
+.cart-page .bottom .total-price .price {
+    font-size: 36rpx;
+}
+
+.cart-page .bottom .total-price .return {
+    font-size: 24rpx;
+    color: gray
+}
+
+.cart-page .bottom .balance {
+    flex: 2;
+    height: 100%;
+    background-color: rgb(235, 68, 80);
+    color: white;
+    font-weight: bold;
+    line-height: 90rpx;
+}
+
+
+/* 购物车商品列表 */
+.cart-list-wrap {
+    padding-bottom: 120rpx;
+}
+
+.cart-list {
+    display: flex;
+    align-items: center;
+    padding: 20rpx 14rpx;
+    border-bottom: 1px solid #eaeaea;
+}
+
+/* 商品图片 */
+.cart-list .img image {
+    border: 1px solid #eaeaea;
+    width: 160rpx;
+    height: 160rpx;
+    margin-left: 20rpx;
+    margin-right: 45rpx;
+}
+
+/* 商品描述 */
+.cart-list .goods-info {
+    width: 60vw;
+}
+
+.cart-list .goods-info .desc {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 商品价格和数量区域 */
+.cart-list .goods-info .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 30rpx;
+    padding-right: 28rpx;
+}
+
+.cart-list .goods-info .wrap .price {
+    margin-right: 44rpx;
+    color: var(--themeColor);
+    font-size: 34rpx;
+}
+
+.cart-list .goods-info .wrap .count {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.cart-list .goods-info .wrap .count .add-count,
+.cart-list .goods-info .wrap .count .sub-count {
+    width: 50rpx;
+    height: 50rpx;
+    text-align: center;
+    line-height: 50rpx;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+}
+
+.cart-list .goods-info .wrap .num {
+    width: 80rpx;
+    text-align: center;
+}
+
+.cart-empty {
+    text-align: center;
+    
+}
+.cart-empty image {
+    width: 60vw;
+    height: 300rpx !important;
+}

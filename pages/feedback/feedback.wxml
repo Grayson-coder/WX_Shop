@@ -1,0 +1,38 @@
+<view class="feedback-page">
+  <!-- 选项卡 -->
+  <tab-control tab-title="{{ ['体验问题', '商品、商家投诉'] }}" />
+  <!-- 内容区域 -->
+  <view class="main">
+    <!-- 问题种类 -->
+    <view class="proboel-cate">
+      <view class="title">问题的种类</view>
+      <view class="list">
+        <view class="item">功能建议</view>
+        <view class="item">购买遇到问题</view>
+        <view class="item">性能问题</view>
+        <view class="item">其他</view>
+      </view>
+    </view>
+    <!-- 问题内容 -->
+    <view class="content">
+      <!-- 多行文本框 -->
+      <textarea placeholder="请描述一下你的问题" value="{{ inputVal }}" bind:input="inputChange"></textarea>
+      <!-- 添加图片的底部区域 -->
+      <view class="content-foot">
+        <!-- 添加图片的按钮 -->
+        <view class="add-img" bind:tap="addImg">+</view>
+        <!-- 图片列表 -->
+        <view class="img-list">
+          <view class="item" wx:for="{{ selectImg }}" wx:key="*this">
+            <image src="{{ item.path }}" />
+            <icon type="clear" size="23" color="red" bind:tap="deleteImg" data-index="{{ index }}"></icon>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 提交按钮 -->
+    <view class="submit-wrap">
+      <view class="submit" bind:tap="submit">提交</view>
+    </view>
+  </view>
+</view>

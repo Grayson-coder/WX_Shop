@@ -1,0 +1,24 @@
+<view class="goods-detail">
+  <!-- 轮播图区域 -->
+  <detail-swiper img-list="{{ swiperList }}" />
+
+  <!-- 商品价格 -->
+  <view class="price">￥{{ goodsInfo.goods_price }}</view>
+
+  <!-- 商品描述 -->
+  <view class="desc">
+    <view class="title">{{ goodsInfo.goods_name }}</view>
+    <view class="collect" bind:tap="collectClick">
+      <view class="iconfont {{ isCollect ? 'icon-shoucang_shixin' : 'icon-shoucang' }}"></view>收藏
+    </view>
+  </view>
+
+  <!-- 商品详情 -->
+  <view class="detail">
+    <view class="title">图文详情</view>
+    <rich-text nodes="{{ goodsInfo.goods_introduce }}" class="content"></rich-text>
+  </view>
+
+  <!-- 底部工具栏区域 -->
+  <nav-bottom bind:addToCart="addToCart" />
+</view>

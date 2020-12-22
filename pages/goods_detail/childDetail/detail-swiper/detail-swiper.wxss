@@ -1,0 +1,10 @@
+/* swiper适配image组件 */
+.swiper {
+    height: 500rpx;
+    text-align: center;
+}
+
+.swiper .swiper-item image {
+    width: 60vw;
+    height: 500rpx !important;
+}

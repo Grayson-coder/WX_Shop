@@ -1,0 +1,50 @@
+@import '../../../../assets/css/iconfont.wxss';
+
+.bottom {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    bottom: 0;
+    height: 108rpx;
+    background-color: #fff;
+    padding-left: 18rpx;
+    border-top: 1px solid #eaeaea;
+}
+
+.bottom .bottom-item {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+
+/* 底部工具栏的button按钮，主要实现button的开放功能 */
+.bottom .bottom-item button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.bottom .bottom-item .iconfont {
+    font-size: 40rpx;
+}
+
+.bottom .to-cart, .bottom .to-buy{
+    flex: 2;
+    color: white;
+    height: 108rpx;
+    line-height: 108rpx;
+    font-weight: bold;
+}
+
+.bottom .to-cart {
+    background-color: rgb(255,184,31);
+}
+
+.bottom .to-buy {
+    background-color: rgb(255,0,0);
+}
+

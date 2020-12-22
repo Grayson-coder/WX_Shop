@@ -1,0 +1,13 @@
+<!-- 搜索框 -->
+<search-input />
+
+<!-- 首页轮播图 -->
+<index-swiper imgList="{{ swiperData }}" />
+
+<!-- 导航区域 -->
+<index-nav nav-menu="{{ navMenu }}" />
+
+<!-- 楼层区域 -->
+<index-floor floor-data="{{ floorData }}"  />
+
+<view class="iconfont icon-gouwucheman"></view>

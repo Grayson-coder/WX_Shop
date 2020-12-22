@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "tab-control": "/components/tab-control/tab-control"
+  },
+  "navigationBarTitleText": "订单查询"
+}

@@ -1,0 +1,29 @@
+<!-- 底部工具栏 -->
+<view class="bottom">
+  <!-- 客服 -->
+  <view class="bottom-item">
+    <view class="iconfont icon-kefu"></view>
+    <view>客服</view>
+    <button open-type="contact"></button>
+  </view>
+  <!-- 分享 -->
+  <view class="bottom-item">
+    <view class="iconfont icon-fenxiang"></view>
+    <view>分享</view>
+    <button open-type="share"></button>
+  </view>
+  <!-- 购物车 -->
+  <view class="bottom-item">
+    <view class="iconfont icon-qicheqianlian-"></view>
+    <view>购物车</view>
+    <button bind:tap="toCartPage"></button>
+  </view>
+  <!-- 加入购物车 -->
+  <view class="bottom-item to-cart">
+    <view bind:tap="addToCart">加入购物车</view>
+  </view>
+  <!-- 立即购买 -->
+  <view class="bottom-item to-buy">
+    <view>立即购买</view>
+  </view>
+</view>

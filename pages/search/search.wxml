@@ -1,0 +1,15 @@
+<view class="search-page">
+  <view class="search-row">
+    <input type="text" placeholder="请输入你要搜索的商品" bind:input="inputChange" value="{{ inputVal }}" />
+    <view class="cancel" bind:tap="cancelClick" hidden="{{ !showCancel }}">取消</view>
+  </view>
+  <view class="search-content">
+    <view
+      class="list"
+      wx:for="{{ goodsList }}"
+      wx:key="index"
+      bind:tap="goodsListClick"
+      data-id="{{ item.goods_id }}"
+    >{{ item.goods_name }}</view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="nav">
+  <navigator
+    url="/pages/category/category"
+    open-type="switchTab"
+    wx:for="{{ navMenu }}"
+    wx:key="name"
+    class="nav-item"
+  >
+    <image src="{{ item.image_src }}" mode="widthFix" />
+  </navigator>
+</view>

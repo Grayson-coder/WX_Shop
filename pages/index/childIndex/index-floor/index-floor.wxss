@@ -1,0 +1,31 @@
+.warp .title {
+    width: 100vw;
+}
+
+.list .list-item {
+    float: left;
+}
+
+.list .list-item:first-child image{
+    width: 250rpx;
+    height: 414rpx;
+    margin-right: 10rpx;
+}
+
+.list .list-item image {
+    width: 240rpx;
+    height: 198rpx;
+    margin-bottom: 5rpx;
+}
+
+.list .list-item:nth-child(2), 
+.list .list-item:nth-child(4){
+    margin-right: 10rpx;
+}
+
+.list .list-item:nth-child(4), 
+.list .list-item:nth-child(5) {
+    margin-top: 5rpx;
+}
+
+

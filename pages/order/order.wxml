@@ -1,0 +1,77 @@
+<view class="order-page">
+  <!-- 订单页面的选项卡 -->
+  <tab-control tab-title="{{ tabTitle }}" bind:tabClick="tabClick" id="tab-control" />
+
+  <!-- 选项卡对应的内容区域 -->
+  <!-- 全部订单 -->
+  <view class="all-order" hidden="{{ currentIndex != 0 }}">
+    <view class="order-list" wx:for="{{ allOrder }}" wx:key="index">
+      <view class="item">
+        <view>订单编号</view>
+        <view>{{ item.order_number }}</view>
+      </view>
+      <view class="item">
+        <view>订单价格</view>
+        <view class="red">￥{{ item.order_price }}</view>
+      </view>
+      <view class="item">
+        <view>订单日期</view>
+        <view>{{ item.create_time }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 待付款订单 -->
+  <view class="await-pay" hidden="{{ currentIndex !== 1 }}">
+    待付款订单
+    <view class="order-list" wx:for="{{ allOrder }}" wx:key="index">
+      <view class="item">
+        <view>订单编号</view>
+        <view>{{ item.order_number }}</view>
+      </view>
+      <view class="item">
+        <view>订单价格</view>
+        <view class="red">￥{{ item.order_price }}</view>
+      </view>
+      <view class="item">
+        <view>订单日期</view>
+        <view>{{ item.create_time }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 待发货订单 -->
+  <view class="await-sipping" hidden="{{ currentIndex !== 2 }}">
+    待发货订单
+    <view class="order-list" wx:for="{{ allOrder }}" wx:key="index">
+      <view class="item">
+        <view>订单编号</view>
+        <view>{{ item.order_number }}</view>
+      </view>
+      <view class="item">
+        <view>订单价格</view>
+        <view class="red">￥{{ item.order_price }}</view>
+      </view>
+      <view class="item">
+        <view>订单日期</view>
+        <view>{{ item.create_time }}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 退款订单 -->
+  <view class="ruturn-order" hidden="{{ currentIndex !== 3 }}">
+    退款订单
+    <view class="order-list" wx:for="{{ allOrder }}" wx:key="index">
+      <view class="item">
+        <view>订单编号</view>
+        <view>{{ item.order_number }}</view>
+      </view>
+      <view class="item">
+        <view>订单价格</view>
+        <view class="red">￥{{ item.order_price }}</view>
+      </view>
+      <view class="item">
+        <view>订单日期</view>
+        <view>{{ item.create_time }}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,16 @@
+/* 初始化页面样式 */
+page,
+view,
+text,
+swiper,
+swiper-item,
+image,
+navigator {
+    padding: 0;
+    margin: 0;
+}
+
+/* 统一字体样式 */
+page {
+    font-size: 28rpx;
+}

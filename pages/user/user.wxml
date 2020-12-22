@@ -1,0 +1,70 @@
+<!-- 个人中心页面 -->
+<view class="profile-page">
+  <view class="user">
+    <!-- 登录按钮 -->
+    <view class="user-login" hidden="{{ userInfo }}">
+      <button bind:tap="login">登录</button>
+    </view>
+
+    <view class="image-box" hidden="{{ !userInfo }}">
+      <image src="{{ userInfo.avatarUrl }}" mode="aspectFill" />
+    </view>
+    <!-- 用户头像信息  -->
+    <view class="user-avatar" hidden="{{ !userInfo }}">
+      <image src="{{ userInfo.avatarUrl }}" />
+      <!-- 用户名称 -->
+      <view class="user-name" hidden="{{ !userInfo }}">{{ userInfo.nickName }}</view>
+    </view>
+  </view>
+  <view class="main">
+    <view class="part1">
+      <view class="collect-shop">
+        <view class="red">0</view>
+        <view>收藏的店铺</view>
+      </view>
+      <view class="collect-goods" bind:tap="collectClick">
+        <view class="red">{{ userInfo ? collectList.length : 0 }}</view>
+        <view>收藏的商品</view>
+      </view>
+      <view class="focus-goods">
+        <view class="red">0</view>
+        <view>关注的商品</view>
+      </view>
+      <view class="history">
+        <view class="red">0</view>
+        <view>历史足迹</view>
+      </view>
+    </view>
+    <view class="part2">
+      <view class="my-order">我的订单</view>
+      <view class="order-list">
+        <view bind:tap="orderClick" data-index="{{ 0 }}">
+          <view class="iconfont icon-quanbudingdan red"></view>
+          <view>全部订单</view>
+        </view>
+        <view bind:tap="orderClick" data-index="{{ 1 }}">
+          <view class="iconfont icon-daifukuan red"></view>
+          <view>待付款</view>
+        </view>
+        <view bind:tap="orderClick" data-index="{{ 2 }}">
+          <view class="iconfont icon-daishouhuo- red"></view>
+          <view>待收货</view>
+        </view>
+        <view bind:tap="orderClick" data-index="{{ 3 }}">
+          <view class="iconfont icon-kefu red"></view>
+          <view>退货/退款</view>
+        </view>
+      </view>
+    </view>
+    <view class="part3">我的收货地址</view>
+    <view class="part4">
+      <view class="list">
+        <view>联系客服</view>
+        <view>403-234-234-2233</view>
+      </view>
+      <view class="list" bind:tap="opinionClick">意见反馈</view>
+      <view class="list">关于我们</view>
+    </view>
+    <view class="part5">把应用推荐给其他人</view>
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<!-- 搜索区域 -->
+<search-input />
+
+<!-- 选项卡 -->
+<tab-contorl tab-title="{{ ['综合', '销量', '推荐'] }}" bind:tabClick="tabClick" />
+
+
+<!-- 选项卡对应的内容区 -->
+<view class="tab-content" hidden="{{ currentIndex !== 0 }}">
+  <!-- 综合内容区 -->
+  <view
+    class="goods-list"
+    wx:for="{{ goodsList }}"
+    wx:key="index"
+    bind:tap="goodsListClick"
+    data-goods-id="{{ item.goods_id }}"
+  >
+    <!-- 左边图片区域 -->
+    <view class="left">
+      <image
+        src="{{ item.goods_small_logo || 'http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000193373779_1_400x400.jpg'}}"
+      />
+    </view>
+    <!-- 右边商品介绍区域  -->
+    <view class="right">
+      <view class="title">{{ item.goods_name }}</view>
+      <view class="price">￥{{ item.goods_price }}</view>
+    </view>
+  </view>
+</view>
+
+
+<view class="tab-conent" hidden="{{ currentIndex !== 1 }}">销量</view>
+<view class="tab-conent" hidden="{{ currentIndex !== 2 }}">推荐</view>

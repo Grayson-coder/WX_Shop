@@ -1,0 +1,52 @@
+.goods-detail {
+    padding-bottom: 150rpx;
+}
+
+/* 商品价格 */
+.price {
+    color: var(--themeColor);
+    font-weight: bold;
+    border-bottom: 5px solid rgb(238,238,238);
+    padding-bottom: 14rpx;
+    padding-left: 16rpx;
+}
+
+/* 商品描述 */
+.desc {
+    display: flex;
+    padding: 17rpx 16rpx;
+    border-bottom: 5px solid rgb(238,238,238);
+}
+
+.desc .title {
+    flex: 8.5;
+    margin-right: 10rpx;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.desc .collect {
+    flex: 1.5;
+    text-align: center;
+    border-left: 1px solid;
+}
+
+.desc .collect .iconfont {
+    font-size: 44rpx;
+}
+
+/* 商品详情 */
+.detail .title {
+    color: var(--themeColor);
+    font-size: 48rpx;
+    border-bottom: 16px solid rgb(238,238,238);
+    padding: 17rpx 16rpx;
+    font-weight: bold;
+}
+
+.icon-shoucang_shixin {
+    color: orangered;
+}

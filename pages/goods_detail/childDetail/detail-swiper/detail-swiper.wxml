@@ -1,0 +1,15 @@
+<swiper indicator-dots autoplay interval="{{ 3000 }}" circular class="swiper">
+  <swiper-item
+    wx:for="{{ imgList }}"
+    wx:key="index"
+    class="swiper-item"
+    bind:tap="swiperClick"
+    data-index="{{ index }}"
+  >
+    <image src="{{ item.pics_mid }}" mode="widthFix" />
+  </swiper-item>
+</swiper>
+
+
+
+

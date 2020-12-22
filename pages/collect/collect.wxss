@@ -1,0 +1,56 @@
+.collect-page {
+    background-color: rgb(242, 243, 247);
+}
+
+.collect-page .type {
+    display: flex;
+    padding: 15rpx 20rpx;
+}
+
+.collect-page .type view {
+    height: 60rpx;
+    line-height: 60rpx;
+    padding: 0 10rpx;
+    margin-right: 20rpx;
+    background-color: white;
+    border: 1px solid #eaeaea;
+}
+
+.collect-page .type .active {
+    border: 1px solid red;
+    color: red;
+}
+
+.collect-page .collect-list {
+    display: flex;
+    padding: 20rpx 30rpx;
+    background-color: #fff;
+    margin-bottom: 30rpx;
+}
+
+.collect-page .collect-list .left image {
+    width: 160rpx;
+    height: 160rpx;
+    margin-right: 25rpx;
+    border: 1px solid #eaeaea;
+}
+
+
+.collect-page .collect-list .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 160rpx;
+}
+
+.collect-page .collect-list .right .name {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.collect-page .collect-list .right .price {
+    color: var(--themeColor);
+}

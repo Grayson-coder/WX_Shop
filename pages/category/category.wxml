@@ -1,0 +1,40 @@
+<!-- 搜索区域 -->
+<search-input />
+
+<!-- 分类内容区域 -->
+<view class="container">
+  <!-- 左侧菜单栏 -->
+  <scroll-view class="left-menu" scroll-y>
+    <view
+      wx:for="{{ leftMenuName }}"
+      wx:key="*this"
+      class="item {{ currentIndex === index ? 'active' : '' }}"
+      bind:tap="leftMenuClick"
+      data-index="{{ index }}"
+    >{{ item }}</view>
+  </scroll-view>
+
+  <!-- 右侧内容 -->
+  <scroll-view class="right-conent" scroll-y scroll-top="{{ scrollTop }}">
+    <view wx:for="{{ rightContent }}" wx:key="cat_id" wx:for-index="index1" wx:for-item="item1">
+      <!-- 分类标题 -->
+      <view class="cat-title">{{ item1.cat_name }}</view>
+
+      <!-- 分类品牌列表 -->
+      <view class="wrap">
+        <view
+          class="brand-list"
+          wx:for="{{ item1.children }}"
+          wx:for-item="item2"
+          wx:for-index="index2"
+          wx:key="cat_id"
+          bind:tap="brandListClick"
+          data-id="{{ item2.cat_id }}"
+        >
+          <image src="{{ item2.cat_icon }}" class="brand-img" mode="widthFix" />
+          <view class="brand-name">{{ item2.cat_name }}</view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

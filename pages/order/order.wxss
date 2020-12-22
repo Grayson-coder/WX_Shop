@@ -1,0 +1,16 @@
+.order-page .order-list {
+    padding: 20rpx 30rpx;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.order-page .order-list .item {
+    display: flex;
+    justify-content: space-between;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+
+.red {
+    color: red;
+}

@@ -1,0 +1,101 @@
+.feedback-page {
+    background-color: rgb(237,237,237);
+    height: 100vh;
+}
+
+.feedback-page .main {
+    padding: 0 20rpx;
+}
+
+.feedback-page .main .title {
+    height: 70rpx;
+    line-height: 70rpx;
+}
+
+
+.feedback-page .main .list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 15rpx;
+}
+
+.feedback-page .main .list .item {
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 30rpx;
+}
+
+.feedback-page .main .content {
+    height: 500rpx;
+    background-color: #fff;
+    margin-top: 30rpx;
+}
+
+.feedback-page .main .content .content-foot {
+    display: flex;
+    margin: 20rpx;
+}
+
+
+.feedback-page .main .content .add-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90rpx;
+    height: 90rpx;
+    background-color: rgb(248,248,248);
+    color: #666;
+    font-size: 44rpx;
+}
+
+.feedback-page .main .img-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30rpx;
+}
+
+.feedback-page .main .img-list .item {
+    position: relative;
+    margin-right: 30rpx;
+}
+
+.feedback-page .main .img-list image {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.feedback-page .main .img-list icon {
+    position: absolute;
+    top: -16rpx;
+    right: -16rpx;
+}
+
+
+.feedback-page .main .content textarea {
+    padding-left: 10rpx;
+    padding-top: 10rpx;
+}
+
+.feedback-page .main .submit-wrap {
+    position: relative;
+}
+
+.feedback-page .main .submit {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90rpx;
+    width: 200rpx;
+    color: white;
+    background-color: rgb(230,67,64);
+    border-radius: 7px;
+    font-size: 30rpx;
+    margin-top: 20rpx;
+    text-align: right;
+}

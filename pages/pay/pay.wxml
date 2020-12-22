@@ -1,0 +1,48 @@
+<view class="pay-page">
+  <!-- 收货地址 -->
+  <view class="shipping-address">
+    <!-- 具体的收货地址 -->
+    <view class="address-info">
+      <view class="user-info">
+        <view class="user-name">收件人：{{ address.userName }}</view>
+        <view class="user-phone">{{ address.telNumber }}</view>
+      </view>
+      <view
+        class="user-address"
+      >{{ address.provinceName + address.cityName + address.countyName + address.detailInfo }}</view>
+    </view>
+  </view>
+
+  <!-- 购物车商品列表 -->
+  <view class="cart-list-wrap">
+    <view class="cart-list" wx:for="{{ cartList }}" wx:key="index">
+      <!-- 商品图片 -->
+      <view class="img">
+        <image src="{{ item.img }}" />
+      </view>
+      <view class="goods-info">
+        <!-- 商品描述 -->
+        <view class="desc">{{ item.title }}</view>
+        <!-- 商品价格和数量 -->
+        <view class="wrap">
+          <!-- 商品价格 -->
+          <view class="price">￥{{ item.price }}</view>
+          <view class="count">x {{ item.count }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+  <!-- 购物车底部结算区域 -->
+  <view class="bottom">
+    <view class="total-price">
+      <view>
+        合计 ￥
+        <text class="price">{{ totalPrice }}</text>
+      </view>
+      <view class="return">退货包运费</view>
+    </view>
+    <view class="balance" bind:tap="payClick">支付({{ totalCount }})</view>
+  </view>
+</view>

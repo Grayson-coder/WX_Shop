@@ -1,0 +1,6 @@
+<view class="search-wrap">
+		<view class="search-input" bind:tap="searchClick">
+				<text class="iconfont icon-sousuo"></text>
+				<text>搜索</text>
+		</view>
+</view>

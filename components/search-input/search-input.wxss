@@ -1,0 +1,21 @@
+/* 由于组件样式是独立模块，因此必须单独引入字体图标样式 */
+@import "../../assets/css/iconfont.wxss";
+
+.search-wrap {
+    padding: 25rpx 15rpx;
+    background-color: var(--themeColor);
+}
+
+.search-input {
+    height: 60rpx;
+    line-height: 60rpx;
+    background-color: rgb(255,255,255);
+    text-align: center;
+    color: #666;
+    font-size: 26rpx;
+    border-radius: 10px;
+}
+
+.icon-sousuo {
+    margin-right: 5px;
+}

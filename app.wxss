@@ -1,0 +1,11 @@
+/* 引入字体图标样式 */
+@import "./assets/css/iconfont.wxss";
+
+/* 引入页面初始化样式 */
+@import "./assets/css/reset.wxss";
+
+/* 定义全局变量 */
+page {
+	/* 定义主题颜色 */
+	--themeColor: #eb4450;
+}

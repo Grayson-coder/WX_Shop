@@ -1,0 +1,25 @@
+<view class="collect-page">
+  <!-- 选项卡 -->
+  <tab-control tab-title="{{ tabTitle }}" bind:tabClick="tabClick" />
+  <view class="type">
+    <view class="active">全部</view>
+    <view>正在热卖</view>
+    <view>即将上线</view>
+  </view>
+  <!-- 收藏的商品列表 -->
+  <view
+    class="collect-list"
+    wx:for="{{ collectList }}"
+    wx:key="index"
+    bind:tap="goodsListClick"
+    data-id="{{ item.goods_id }}"
+  >
+    <view class="left">
+      <image src="{{ item.goods_img || 'http://image5.suning.cn/uimg/b2c/newcatentries/0000000000-000000000193373779_1_400x400.jpg' }}" />
+    </view>
+    <view class="right">
+      <view class="name">{{ item.goods_name }}</view>
+      <view class="price">￥{{ item.goods_price }}</view>
+    </view>
+  </view>
+</view>
